@@ -6,7 +6,9 @@ aaa_root:
 banners:
   motd: 'You shall not pass. Unless you are authorized. Then you shall pass.
 
-    EOF'
+    EOF
+
+    '
 config_end: true
 daemon_terminattr:
   cvaddrs:
@@ -97,6 +99,15 @@ local_users:
   sha512_password: $6$arista$R3GixqsaN3LgwWnJQ0qMzJjADwc60hNWjNIN5usa2JvtPmXvcjA5LMNfxVHFvDYoCl.VVCayZB5ZmU8jLF.6x1
   ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHoJ1s2sKrNTMIE1TbuRxG8erSc1Q0ZdzwJ1fqE5BVINyKV7mG4lVFRD4gfcgsMYw1msZT5TGnUZvypRm8LLpbg/yIlcUMKv4nyyB9UkbtobmeUGtgADBht99R6XkF5WxX1IZ6MNx0gqtDoY5GiMrl54N67g9zEUJcJuj0re+iqamWV1svSdaXq+iqgsJSDsVRYfFMBS104hzvuLnqUFavvU0fYDyn8DCcyd5GZt2RS5xFgOAkC+LIEr+Qaz6kvKcbKTGjAcbiZ8Sac5kA3iFqb3oqlQDCO4QPGovV5KzsBoZWYxqymrqrGqZwy7FMaq9D7OkAV9HWmTWhuMWrCOif
     arista@uk-foundation-automation-testdrive-25-b4b57750-eos
+logging:
+  vrfs:
+  - name: default
+    source_interface: Management0
+    hosts:
+    - name: 10.200.0.108
+      protocol: udp
+    - name: 10.200.1.108
+      protocol: udp
 loopback_interfaces:
 - name: Loopback0
   description: ROUTER_ID
